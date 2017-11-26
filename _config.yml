@@ -1,0 +1,10 @@
+# Menu
+menu:
+  home:
+    name: Inicio
+    url: /
+    icon: home
+  archive:
+    name: Archivo
+    url: /archives
+    icon: calendar
