@@ -1,0 +1,4 @@
+article(class='container-fluid')
+    h1(class='article-title') #{article.title}
+    span= article.date.format('MMMM Do YYYY, h:mm:ss a')
+    div(class='container space-top') !{article.content}

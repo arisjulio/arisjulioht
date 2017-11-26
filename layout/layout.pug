@@ -12,8 +12,6 @@ body
                         a(class='nav-link' + (is_current(item.url) ? ' active' : ''), href=url_for(item.url))
                             span(class='oi oi-' + item.icon)
                             = item.name
-            div(class='col-md-8')
-                div
-                    | !{body}
-                // div= JSON.stringify(config)
+            div(class='col-md-8', id='content')
+                | !{body}
 | !{partial('_partial/footer')}

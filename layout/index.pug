@@ -1,1 +1,2 @@
-p Este es index
+each article in site.posts.toArray()
+    | !{partial('_partial/article', {article: article})}
