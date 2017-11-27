@@ -1,0 +1,10 @@
+article(class='container-fluid', id='blog-archive')
+    h1(class='article-title') !{__('blog_archive')}
+    div(class='container space-top')
+        div(class='row')
+            each item in site.posts.toArray()
+                div(class='card col-md-4')
+                    div(class='card-body')
+                        h4(class='card-title')= item.title
+                        a(class='btn btn-primary', href=url_for(item.path)) !{__('read_more')}
+| !{partial('_partial/paginator')}

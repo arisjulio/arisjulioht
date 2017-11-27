@@ -1,10 +1,11 @@
 # Menu
 menu:
   home:
-    name: Inicio
     url: /
     icon: home
+  about:
+    url: /acerca-de
+    icon: person
   archive:
-    name: Archivo
     url: /archives
     icon: briefcase

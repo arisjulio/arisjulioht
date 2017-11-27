@@ -38,6 +38,10 @@ figure.highlight td.gutter {
     margin: 0 !important;
 }
 
+.no-padding {
+    padding: 0 !important;
+}
+
 .space-top {
     margin-top: 30px;  
 }
@@ -63,7 +67,8 @@ figure.highlight td.gutter {
 }
 
 #main-menu a.nav-link.active {
-    color: #000000
+    color: #000000;
+    font-weight: 600;
 }
 
 h1.blog-title {
@@ -80,6 +85,15 @@ h1.article-title {
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
     margin-bottom: 5px !important;
+}
+
+h1.article-title a {
+    color: #000000;
+}
+
+h1.article-title a:hover {
+    text-decoration: none;
+    color: #007bff;
 }
 
 #content {
@@ -119,12 +133,35 @@ h1.article-title {
 #content article ul.tag-list li a {
     padding: 5px;
     background-color: #ebebeb;
-    border-radius: 3px; 
+    border-radius: 3px;
 }
 
 #content article h1, #content article h2, #content article h3, #content article h4, #content article h5, #content article h6 {
     color: #555;
     margin: 25px 0;
+}
+
+div.paginator > a,
+div.paginator > span {
+    padding: 7px 14px;
+    text-align: center;
+    border: solid 1px #eeeeee;
+    border-right-width: 0;
+}
+
+div.paginator > a:hover {
+    text-decoration: none;
+    background-color: #f6f6f6;
+}
+
+div.paginator > *:first-child {
+    border-radius: 5px 0 0 5px;
+    border-left-width: 1px;
+}
+
+div.paginator > *:last-child {
+    border-radius: 0 5px 5px 0;
+    border-right-width: 1px;
 }
 
 footer {

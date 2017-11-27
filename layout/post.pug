@@ -1,0 +1,8 @@
+article(class='container-fluid')
+    h1(class='article-title')= page.title
+    div(class='article-info')
+        span(class='oi oi-calendar')
+        span(class='article-date') #{page.date.format('D/MM/YYYY. h:mm:ss a')}
+        span(class='oi oi-tags')
+        | !{list_tags(page.tags, {show_count: false, class: 'tag'})}
+    div(class='container space-top') !{page.content}

@@ -1,5 +1,6 @@
 article(class='container-fluid')
-    h1(class='article-title') #{article.title}
+    h1(class='article-title') 
+        a(href=url_for(article.path))= article.title
     div(class='article-info')
         span(class='oi oi-calendar')
         span(class='article-date') #{article.date.format('D/MM/YYYY. h:mm:ss a')}
