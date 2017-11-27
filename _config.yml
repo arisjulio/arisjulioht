@@ -6,6 +6,6 @@ menu:
   about:
     url: /acerca-de
     icon: person
-  archive:
-    url: /archives
-    icon: briefcase
+  # archive:
+  #   url: /archives
+  #   icon: briefcase
