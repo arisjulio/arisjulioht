@@ -1,0 +1,5 @@
+nav(class="nav flex-column" id='main-menu')
+    each item in theme.menu
+        a(class='nav-link text-right' + (is_current(item.url) ? ' active' : ''), href=url_for(item.url))
+            = item.name
+            span(class='oi oi-' + item.icon)
