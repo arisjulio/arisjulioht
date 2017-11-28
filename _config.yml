@@ -7,13 +7,13 @@ menu:
     url: /acerca-de
     icon: person
   archive:
-    url: /archives
+    url: /archivo
     icon: briefcase
 
 # Comments
 disqus:
-  embed: 
-  count: 
+  embed: https://arisjulio.disqus.com/embed.js
+  count: https://arisjulio.disqus.com/count.js
 
 #Months
 months:
