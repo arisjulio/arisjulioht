@@ -3,5 +3,5 @@
         prev_text: '&laquo; ' + __('prev'),
         next_text: __('next') + ' &raquo;'
     }
-- if(page.total > 1)
+if (page.total > 1)
     div(class='paginator')!= paginator(configPag)

@@ -96,7 +96,7 @@ h1.article-title a {
 }
 
 article .card .card-title {
-    margin: 20px 0 !important;
+    margin: 0 !important;
 }
 
 h1.article-title a:hover {
@@ -151,6 +151,18 @@ h1.article-title a:hover {
 #content article h1, #content article h2, #content article h3, #content article h4, #content article h5, #content article h6 {
     color: #555;
     margin: 35px 0 20px;
+}
+
+#blog-archive .item-archive {
+    margin-bottom: 10px;
+}
+
+#blog-archive .item-archive .card {
+    height: 100%;
+}
+
+#blog-archive .breadcrumb {
+    font-size: 13px;
 }
 
 div.paginator > a,

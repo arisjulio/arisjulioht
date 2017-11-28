@@ -1,11 +1,13 @@
-article(class='container-fluid')
+article(class='container-fluid', id='blog-archive')
     h1(class='article-title')= __('tag_content', page.tag)
     div(class='container space-top')
         div(class='row')
             each item in page.posts.toArray()
-                div(class='col-md-6')
+                div(class='col-md-6 item-archive')
                     div(class='card')
                         div(class='card-body')
-                            h4(class='card-title')= item.title
-                            a(class='btn btn-primary', href=url_for(item.path))!= __('read_more')
+                            h4(class='card-title')
+                                a(href=url_for(item.path))= item.title
+                            p(class='no-margin')
+                                small= item.date.format('D/MM/YYYY. h:mm:ss a')
 != partial('_partial/paginator')

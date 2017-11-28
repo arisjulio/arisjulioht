@@ -1,10 +1,49 @@
+-
+    function get_years() {
+        let years = []
+        for(let post of site.posts.toArray()) {
+            if(!years.includes(post.date.year())) years.push(post.date.year())
+        }
+        return years
+    }
+
+    function get_months() {
+        let months = []
+        for(let post of site.posts.toArray()) {
+            if(!months.includes(post.date.month() + 1) && post.date.year() === page.year) {
+                months.push(post.date.month() + 1)
+            }
+        }
+        return months
+    }
 article(class='container-fluid', id='blog-archive')
-    h1(class='article-title')!= __('blog_archive')
+    h1(class='article-title')!= __('blog_archive') 
+    div(class='archive-info')
+        nav(role='navigation')
+            ol(class='breadcrumb')
+                each year in get_years()
+                    li(class='breadcrumb-item ' + (page.year == year ? 'active' : ''))
+                        if (page.year != year)
+                            a(href=url_for(config.archive_dir + '/' + year))= year
+                        else
+                            = year
+        if (page.year)
+            nav(role='navigation')
+                ol(class='breadcrumb')
+                    each month in get_months()
+                        li(class='breadcrumb-item ' + (page.month == month ? 'active' : ''))
+                            if (page.month != month)
+                                a(href=url_for(config.archive_dir + '/' + page.year + '/' + month))!= __(theme.months[month - 1])
+                            else
+                                = __(theme.months[month - 1])
     div(class='container space-top')
         div(class='row')
-            each item in site.posts.toArray()
-                div(class='card col-md-4')
-                    div(class='card-body')
-                        h4(class='card-title')= item.title
-                        a(class='btn btn-primary', href=url_for(item.path))!= __('read_more')
+            each item in page.posts.toArray()
+                div(class='col-md-6 item-archive')
+                    div(class='card')
+                        div(class='card-body')
+                            h4(class='card-title')
+                                a(href=url_for(item.path))= item.title
+                            p(class='no-margin')
+                                small= item.date.format('D/MM/YYYY. h:mm:ss a')
 != partial('_partial/paginator')
