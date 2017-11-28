@@ -16,26 +16,16 @@ blockquote p {
     margin: 0;
 }
 
-figure.highlight {
+#content article pre {
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
-    background-color: #f6f6f6;
-    color: #cccccc;
-    padding: 20px;
-    border-radius: 5px;
     font-size: 15px;
 }
 
-figure.highlight pre {
-    margin: 0;
-}
-
-figure.highlight td.gutter {
-    font-size: 10px;
-    padding-right: 15px;
-    color: #ddd;
-    vertical-align: middle;
+#content article pre code {
+    border-radius: 3px;
+    padding: 10px;
 }
 
 .no-margin {

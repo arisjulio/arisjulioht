@@ -29,3 +29,6 @@ months:
   - october
   - november
   - december
+
+# Highlight theme
+highlight_theme: atom-one-dark
