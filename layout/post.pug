@@ -9,12 +9,12 @@ article(class='container-fluid')
     div(id='disqus_thread')
 script
     | var disqus_config = function () {
-    | this.page.url = '!{config.url + page.path}';
-    | this.page.identifier = '!{page.path}';
+    | this.page.url = '#{config.url + page.path}';
+    | this.page.identifier = '#{page.path}';
     | };
     | (function() {
     | var d = document, s = d.createElement('script');
-    | s.src = 'https://arisjulio.disqus.com/embed.js';
+    | s.src = '#{theme.disqus_embed}';
     | s.setAttribute('data-timestamp', +new Date());
     | (d.head || d.body).appendChild(s);
     | })();
