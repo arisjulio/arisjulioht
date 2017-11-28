@@ -11,4 +11,6 @@ menu:
   #   icon: briefcase
 
 # Comments
-disqus_embed: 
+disqus:
+  embed: 
+  count: 

@@ -1,5 +1,5 @@
-nav(class="nav flex-column" id='main-menu')
+nav(class="nav flex-column", id='main-menu')
     each item, i in theme.menu
         a(class='nav-link text-right' + (is_current(item.url) ? ' active' : ''), href=url_for(item.url))
-            | !{__(i)}
+            != __(i)
             span(class='oi oi-' + item.icon)

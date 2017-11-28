@@ -95,6 +95,10 @@ h1.article-title a {
     color: #000000;
 }
 
+article .card .card-title {
+    margin: 20px 0 !important;
+}
+
 h1.article-title a:hover {
     text-decoration: none;
     color: #007bff;

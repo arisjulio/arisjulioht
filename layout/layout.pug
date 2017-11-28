@@ -1,10 +1,9 @@
-| !{partial('_partial/head')}
+!= partial('_partial/head')
 body
-    | !{partial('_partial/header')}
+    != partial('_partial/header')
     div(class='container')
         div(class='row')
             div(class='col-md-3 left-panel')
-                | !{partial('_partial/menu')}
-            div(class='col-md-9', id='content')
-                | !{body}
-| !{partial('_partial/footer')}
+               != partial('_partial/menu')
+            div(class='col-md-9', id='content')!= body
+!= partial('_partial/footer')

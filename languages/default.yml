@@ -1,11 +1,11 @@
 # Menu items
-home: Inicio
-archive: Archivo
+home: Blog
 about: Acerca de mí
+archive: Archivo
 
 blog_archive: Archivo del blog
 read_more: Leer más
-tag_content: Contenido con la etiqueta
+tag_content: Contenido con la etiqueta %s
 
 next: Siguiente
 prev: Anterior
