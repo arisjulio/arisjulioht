@@ -3,11 +3,8 @@ menu:
   home:
     url: /
     icon: home
-  about:
-    url: /acerca-de
-    icon: person
   archive:
-    url: /archivo
+    url: /archives
     icon: briefcase
 
 # Comments
