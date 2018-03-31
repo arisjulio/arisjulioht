@@ -4,6 +4,7 @@ article(class='container-fluid')
     div(class='article-info')
         span(class='oi oi-calendar')
         span(class='article-date')= article.date.format('D/MM/YYYY. h:mm:ss a')
-        span(class='oi oi-tags')
-        != list_tags(article.tags, { show_count: false, class: 'tag' })
-    div(class='container space-top')!= article.content
+        if (article.tags.toArray().length > 0)
+            span(class='oi oi-tags')
+            != list_tags(article.tags, { show_count: false, class: 'tag' })
+    div(class='container-fluid space-top')!= article.content

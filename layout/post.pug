@@ -3,18 +3,20 @@ article(class='container-fluid')
     div(class='article-info')
         span(class='oi oi-calendar')
         span(class='article-date')= page.date.format('D/MM/YYYY. h:mm:ss a')
-        span(class='oi oi-tags')
-        != list_tags(page.tags, {show_count: false, class: 'tag'})
-    div(class='container space-top')!= page.content
+        if (page.tags.toArray().length > 0)
+            span(class='oi oi-tags')
+            != list_tags(page.tags, {show_count: false, class: 'tag'})
+    div(class='container-fluid space-top')!= page.content
     div(id='disqus_thread')
-script
-    | var disqus_config = function () {
-    | this.page.url = '#{config.url + page.path}';
-    | this.page.identifier = '#{page.path}';
-    | };
-    | (function() {
-    | var d = document, s = d.createElement('script');
-    | s.src = '#{theme.disqus.embed}';
-    | s.setAttribute('data-timestamp', +new Date());
-    | (d.head || d.body).appendChild(s);
-    | })();
+if (theme.disqus_user)
+    script
+        | var disqus_config = function () {
+        | this.page.url = '#{config.url + page.path}';
+        | this.page.identifier = '#{page.path}';
+        | };
+        | (function() {
+        | var d = document, s = d.createElement('script');
+        | s.src = 'https://#{theme.disqus_user}.disqus.com/embed.js';
+        | s.setAttribute('data-timestamp', +new Date());
+        | (d.head || d.body).appendChild(s);
+        | })();

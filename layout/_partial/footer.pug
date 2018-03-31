@@ -1,8 +1,9 @@
 footer
-    p(class='no-margin') &copy; 2017 #{config.author}.
+    p(class='no-margin') &copy; #{new Date().getFullYear()} #{config.author}.
     p(class='no-margin')
         span(class='oi oi-code')
         |  with 
         span(class='oi oi-heart')
         |  in Baranoa.
-script(id='dsq-count-scr', src=theme.disqus.count, async)
+if (theme.disqus_user)
+    script(id='dsq-count-scr', src='https://#{theme.disqus_user}.disqus.com/embed.js', async)

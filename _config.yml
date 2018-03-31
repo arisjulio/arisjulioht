@@ -1,34 +1,17 @@
+# Favicon
+favicon:
+
 # Menu
 menu:
   home:
     url: /
     icon: home
-  about:
-    url: /acerca-de
-    icon: person
   archive:
-    url: /archivo
+    url: /archives
     icon: briefcase
 
 # Comments
-disqus:
-  embed: 
-  count: 
-
-#Months
-months:
-  - january
-  - february
-  - march
-  - april
-  - may
-  - june
-  - july
-  - august
-  - september
-  - october
-  - november
-  - december
+disqus_user:
 
 # Highlight theme
 highlight_theme: atom-one-dark
