@@ -1,4 +1,9 @@
 -
+    let langMonths = [
+        'january', 'february', 'march', 'april', 'may', 'june',
+        'july', 'august', 'september', 'october', 'november', 'december'
+    ]
+
     function get_years() {
         let years = []
         for(let post of site.posts.toArray()) {
@@ -33,9 +38,9 @@ article(class='container-fluid', id='blog-archive')
                     each month in get_months()
                         li(class='breadcrumb-item ' + (page.month == month ? 'active' : ''))
                             if (page.month != month)
-                                a(href=url_for(config.archive_dir + '/' + page.year + '/' + month))!= __(theme.months[month - 1])
+                                a(href=url_for(config.archive_dir + '/' + page.year + '/' + month))!= __(langMonths[month - 1])
                             else
-                                = __(theme.months[month - 1])
+                                = __(langMonths[month - 1])
     div(class='container space-top')
         div(class='row')
             each item in page.posts.toArray()

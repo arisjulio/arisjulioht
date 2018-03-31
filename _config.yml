@@ -13,20 +13,5 @@ menu:
 # Comments
 disqususername:
 
-#Months
-months:
-  - january
-  - february
-  - march
-  - april
-  - may
-  - june
-  - july
-  - august
-  - september
-  - october
-  - november
-  - december
-
 # Highlight theme
 highlight_theme: atom-one-dark
