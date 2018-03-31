@@ -182,3 +182,24 @@ footer {
     background-color: #ebebeb;
     padding: 40px;
 }
+
+/* Media queries */
+@media screen and (max-width: 770px) {
+    #content {
+        padding-top: 0;
+    }
+
+    .left-panel {
+        border-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #content {
+        padding: 0;
+    }
+
+    .left-panel {
+        padding: 0;
+    }
+}

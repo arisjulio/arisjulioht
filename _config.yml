@@ -11,7 +11,7 @@ menu:
     icon: briefcase
 
 # Comments
-disqususername:
+disqus_user:
 
 # Highlight theme
 highlight_theme: atom-one-dark

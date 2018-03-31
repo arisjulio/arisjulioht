@@ -6,5 +6,5 @@ article(class='container-fluid')
         span(class='article-date')= article.date.format('D/MM/YYYY. h:mm:ss a')
         if (article.tags.toArray().length > 0)
             span(class='oi oi-tags')
-        != list_tags(article.tags, { show_count: false, class: 'tag' })
-    div(class='container space-top')!= article.content
+            != list_tags(article.tags, { show_count: false, class: 'tag' })
+    div(class='container-fluid space-top')!= article.content
