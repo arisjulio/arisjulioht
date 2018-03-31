@@ -8,9 +8,7 @@ menu:
     icon: briefcase
 
 # Comments
-disqus:
-  embed: 
-  count: 
+disqususername:
 
 #Months
 months:

@@ -7,14 +7,15 @@ article(class='container-fluid')
         != list_tags(page.tags, {show_count: false, class: 'tag'})
     div(class='container space-top')!= page.content
     div(id='disqus_thread')
-script
-    | var disqus_config = function () {
-    | this.page.url = '#{config.url + page.path}';
-    | this.page.identifier = '#{page.path}';
-    | };
-    | (function() {
-    | var d = document, s = d.createElement('script');
-    | s.src = '#{theme.disqus.embed}';
-    | s.setAttribute('data-timestamp', +new Date());
-    | (d.head || d.body).appendChild(s);
-    | })();
+if (theme.disqususername)
+    script
+        | var disqus_config = function () {
+        | this.page.url = '#{config.url + page.path}';
+        | this.page.identifier = '#{page.path}';
+        | };
+        | (function() {
+        | var d = document, s = d.createElement('script');
+        | s.src = 'https://#{theme.disqususername}.disqus.com/embed.js';
+        | s.setAttribute('data-timestamp', +new Date());
+        | (d.head || d.body).appendChild(s);
+        | })();

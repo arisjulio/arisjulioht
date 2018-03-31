@@ -5,4 +5,5 @@ footer
         |  with 
         span(class='oi oi-heart')
         |  in Baranoa.
-script(id='dsq-count-scr', src=theme.disqus.count, async)
+if (theme.disqususername)
+    script(id='dsq-count-scr', src='https://#{theme.disqususername}.disqus.com/embed.js', async)
