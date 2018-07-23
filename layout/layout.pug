@@ -1,9 +1,8 @@
 != partial('_partial/head')
 body
     != partial('_partial/header')
-    div(class='container-fluid')
-        div(class='row')
-            div(class='col-md-2 left-panel')
-               != partial('_partial/menu')
-            div(class='col-md-10', id='content')!= body
+    div(class='container-fluid main-container')
+        div(class='left-panel')
+            != partial('_partial/menu')
+        div(id='content')!= body
 != partial('_partial/footer')

@@ -8,3 +8,4 @@ article(class='container-fluid')
             span(class='oi oi-tags')
             != list_tags(article.tags, { show_count: false, class: 'tag' })
     div(class='container-fluid space-top')!= article.content
+hr(class='article-separator')
