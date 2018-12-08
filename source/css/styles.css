@@ -114,16 +114,16 @@ h2.blog-subtitle {
     padding: 20px;
 }
 
-#content article .card-title {
+#content .card-title {
     margin: 0 !important;
 }
 
-#content article .card-title > a {
+#content .card-title > a {
     color: #000;
     font-family: 'Heebo', sans-serif !important;
 }
 
-#content article .card-title > a:hover {
+#content .card-title > a:hover {
     color: #333;
     text-decoration: none;
 }
