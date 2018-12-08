@@ -1,10 +1,22 @@
+/* General */
+body {
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: 300;
+    color: #555;
+}
+
+a,
+a:hover {
+    color: #000;
+}
+
 img {
     max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    color: #555;
+    color: #000;
 }
 
 blockquote {
@@ -17,18 +29,7 @@ blockquote p {
     margin: 0;
 }
 
-#content article pre {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    font-size: 15px;
-}
-
-#content article pre code {
-    border-radius: 3px;
-    padding: 10px;
-}
-
+/* Helper classes */
 .no-margin {
     margin: 0 !important;
 }
@@ -41,122 +42,95 @@ blockquote p {
     margin-top: 30px;  
 }
 
+.main-container {
+    max-width: 960px;
+}
+
+/* Header */
 #blog-header {
-    background-color: #47A8E9;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 #blog-header .container {
     max-width: 960px;
 }
 
-#blog-header .container .blog-title,
-#blog-header .container .blog-subtitle {
+#blog-header .blog-title,
+#blog-header .blog-subtitle {
     display: inline-block;
     vertical-align: middle;
 }
 
-.separator {
-    height: 35px;
-    display:inline-block;
-    margin: 0 20px -10px;
-    border-left: solid 1px #fff;
+h1.blog-title {
+    color: #000;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
 }
 
-.main-container {
-    max-width: 960px;
+h2.blog-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: solid 1px #eee;
+    color: #888;
 }
 
-.article-separator {
-    background: url('/images/separator.png');
-    width: 100%;
-    height: 30px;
-    margin: 60px 0;
-    background-position: center center;
-    border: none !important;
-    background-repeat: no-repeat;
+#main-menu {
+    float: right;
 }
 
-.left-panel {
-    padding: 30px 0;
-    position: fixed;
-    width: 230px;
-}
-
-#main-menu span.oi {
-    color: #c4c4c4;
-    margin-right: 15px; 
-}
-
-#main-menu > a {
-    border: solid 1px #ebebeb;
-    border-bottom: 0;
-}
-
-#main-menu > a:first-child {
-    border-radius: 5px 5px 0 0;
-}
-
-#main-menu > a:last-child {
-    border-radius: 0 0 5px 5px;
-    border-bottom: solid 1px #ebebeb;
-}
-
-#main-menu a.nav-link.active span.oi {
-    color: #000000;
+#main-menu a.nav-link {
+    color: #000;
+    font-weight: 300;
+    padding-top: 0;
 }
 
 #main-menu a.nav-link.active {
     color: #000000;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-h1.blog-title {
-    color: #fff;
-    font-family: 'Unna', serif;
-}
-
-h2.blog-subtitle {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-h1.article-title {
-    color: #000000 !important;
-    margin-bottom: 0 !important;
-}
-
-h1.article-title a {
-    color: #000000;
-}
-
-article .card .card-title {
-    margin: 0 !important;
-}
-
-h1.article-title a:hover {
-    text-decoration: none;
-    color: #007bff;
-}
-
+/* Content */
 #content {
-    padding: 40px 0 40px 20px;
     min-height: 380px;
-    margin-left: 250px;
+    margin-top: 40px;
 }
 
 #content article {
-    font-size: 18px;
+    font-size: 16px;
+}
+
+#content article pre {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 12px;
+}
+
+#content article pre code {
+    border-radius: 3px;
+    padding: 20px;
+}
+
+#content article .card-title {
+    margin: 0 !important;
+}
+
+#content article .card-title > a {
+    color: #000;
+    font-family: 'Heebo', sans-serif !important;
+}
+
+#content article .card-title > a:hover {
+    color: #333;
+    text-decoration: none;
 }
 
 #content > article > .container-fluid,
 #content > article > .container {
     padding: 0 !important;
-}
-
-#content article #disqus_thread {
-    margin-top: 50px;
 }
 
 #content article .article-info span.oi {
@@ -171,7 +145,7 @@ h1.article-title a:hover {
     margin-right: 20px;
 }
 
-#content article .article-info ul.tag-list {
+ul.tag-list {
     padding: 0;
     margin: 10px 0 0;
     list-style-type: none;
@@ -179,105 +153,103 @@ h1.article-title a:hover {
     display: inline-block;
 }
 
-#content article .article-info ul.tag-list li {
+ul.tag-list li {
     display: inline-block;
     margin-right: 3px;
 }
 
-#content article ul.tag-list li a {
-    padding: 1px 3px;
-    border: solid 1px #09f;
+ul.tag-list li a {
+    padding: 5px 7px;
+    border: solid 1px #ddd;
     border-radius: 3px;
+    color: #888;
+    display: block;
+    transition: all .2s ease-in;
 }
 
-#content article ul.tag-list li a:hover {
+ul.tag-list li a:hover {
     text-decoration: none;
+    border-color: #333;
+    color: #333;
 }
 
-#content article h1, #content article h2, #content article h3, #content article h4, #content article h5, #content article h6 {
-    font-family: 'Unna', serif;
+#content article .article-content h1, 
+#content article .article-content h2, 
+#content article .article-content h3, 
+#content article .article-content h4, 
+#content article .article-content h5, 
+#content article .article-content h6 {
+    font-weight: 400;
+    margin-top: 30px;    
 }
 
-#blog-archive .item-archive {
-    margin-bottom: 10px;
+#content article .article-header {
+    min-height: 200px;
 }
 
-#blog-archive .item-archive .card {
-    height: 100%;
+#content article .article-header .img-wrapper {
+    background-size: auto 110%;
+    background-position: 50% 50%;
 }
 
-#blog-archive .breadcrumb {
+#content article .article-header .info-wrapper {
+    padding: 30px 0 30px 20px;
+}
+
+#content article .article-content {
+    margin-top: 60px;
+    max-width: 800px;
+}
+
+#content article .page-content,
+#content article .archive-content {
+    margin-top: 60px;
+}
+
+#content article .archive-info {
+    margin-top: 60px;
+}
+
+
+#content article .archive-info .breadcrumb {
     font-size: 13px;
+}
+
+#content article #disqus_thread {
+    margin-top: 50px;
 }
 
 div.paginator {
     text-align: center;
+    margin: 60px 0 20px;
 }
 
 div.paginator > a,
 div.paginator > span {
     padding: 7px 14px;
     text-align: center;
-    border: solid 1px #eeeeee;
-    border-right-width: 0;
+    color: #888;
+}
+
+div.paginator > span.current {
+    color: #000;
+    font-weight: 800;
 }
 
 div.paginator > a:hover {
     text-decoration: none;
-    background-color: #f6f6f6;
-}
-
-div.paginator > *:first-child {
-    border-radius: 5px 0 0 5px;
-    border-left-width: 1px;
-}
-
-div.paginator > *:last-child {
-    border-radius: 0 5px 5px 0;
-    border-right-width: 1px;
+    color: #000;
 }
 
 footer {
-    background-color: #ebebeb;
-    padding: 20px 0;
+    padding: 40px 0 20px;
     text-align: center;
+    color: #888;
+    font-weight: 300;
+    font-family: 'Heebo', sans-serif;
 }
 
 /* Media queries */
-@media screen and (max-width: 960px) {
-    #content {
-        margin-left: 0;
-        width: 100%;
-        padding-right: 20px;
-    }
-
-    .left-panel {
-        position: static;
-        width: auto;
-        padding-bottom: 0;
-    }
-
-    #main-menu {
-        flex-direction: inherit !important;
-        text-align: center;
-        display: block;
-    }
-
-    #main-menu a.nav-link {
-        display: inline-block;
-    }
-
-    #main-menu a.nav-link:first-child {
-        border-bottom: solid 1px #ebebeb;
-        border-radius: 5px 0 0 5px;
-        border-right: 0;
-    }
-
-    #main-menu a.nav-link:last-child {
-        border-radius: 0 5px 5px 0;
-    }
-}
-
 @media screen and (max-width: 600px) {
     #content {
         padding-left: 0;
@@ -287,32 +259,15 @@ footer {
     #main-menu {
         flex-direction: column !important;
         display: flex;
+        float: none;
+        margin-top: 40px;
     }
 
     #main-menu a.nav-link {
         display: block;
     }
 
-    #main-menu a.nav-link:first-child {
-        border-bottom: 0;
-        border-radius: 5px 5px 0 0;
-        border-right: solid 1px #ebebeb;
-    }
-
-    #main-menu a.nav-link:last-child {
-        border-radius: 0 0 5px 5px;
-    }
-
     #blog-header {
         text-align: center;
-    }
-
-    #blog-header .container .blog-title,
-    #blog-header .container .blog-subtitle {
-        display: block;
-    }
-
-    .separator {
-        display: none;
     }
 }

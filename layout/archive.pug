@@ -21,8 +21,8 @@
         }
         return months
     }
-article(class='container-fluid', id='blog-archive')
-    h1(class='article-title')!= __('blog_archive') 
+article(class='container-fluid')
+    h1(class='page-title text-center')!= __('blog_archive') 
     div(class='archive-info')
         nav(role='navigation')
             ol(class='breadcrumb')
@@ -42,14 +42,8 @@ article(class='container-fluid', id='blog-archive')
                                     != __(langMonths[month - 1])
                             else
                                 = __(langMonths[month - 1])
-    div(class='container space-top')
-        div(class='row')
+    div(class='container archive-content')
+        div(class='card-columns')
             each item in page.posts.toArray()
-                div(class='col-md-6 item-archive')
-                    div(class='card')
-                        div(class='card-body')
-                            h4(class='card-title')
-                                a(href=url_for(item.path))= item.title
-                            p(class='no-margin')
-                                small= item.date.format('D/MM/YYYY. h:mm:ss a')
+                != partial('_partial/card', { article: item })
 != partial('_partial/paginator')

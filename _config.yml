@@ -5,13 +5,11 @@ favicon:
 menu:
   home:
     url: /
-    icon: home
   archive:
     url: /archives
-    icon: briefcase
 
 # Comments
 disqus_user:
 
 # Highlight theme
-highlight_theme: atom-one-dark
+highlight_theme: tomorrow

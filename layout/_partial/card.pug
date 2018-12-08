@@ -1,0 +1,10 @@
+div(class='card')
+    img(src=url_for(article.image || 'images/default.jpg'))
+    div(class='card-body')
+        h5(class='card-title')
+            a(href=url_for(article.path))= article.title
+        p(class='card-text')
+            if (article.tags.toArray().length > 0)
+                != list_tags(article.tags, {show_count: false, class: 'tag'})
+        div(class='card-text')
+            small(class='text-muted')= article.date.format('D/MM/YYYY. h:mm:ss a')

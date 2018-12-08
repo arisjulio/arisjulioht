@@ -1,12 +1,17 @@
 article(class='container-fluid')
-    h1(class='article-title')= page.title
-    div(class='article-info')
-        span(class='oi oi-calendar')
-        span(class='article-date')= page.date.format('D/MM/YYYY. h:mm:ss a')
-        if (page.tags.toArray().length > 0)
-            span(class='oi oi-tags')
-            != list_tags(page.tags, {show_count: false, class: 'tag'})
-    div(class='container-fluid space-top')!= page.content
+    div(class='row article-header')
+        div(class='col-md-4 img-wrapper', style='background-image: url(' + url_for(page.image || 'images/default.jpg'))
+        div(class='col-md-8 info-wrapper')
+            h1(class='article-title')= page.title
+            div(class='article-info')
+                div
+                    span(class='oi oi-calendar')
+                    span(class='article-date')= page.date.format('D/MM/YYYY. h:mm:ss a')
+                if (page.tags.toArray().length > 0)
+                    div
+                        span(class='oi oi-tags')
+                        span!= list_tags(page.tags, {show_count: false, class: 'tag'})
+    div(class='container-fluid article-content')!= page.content
     div(id='disqus_thread')
 if (theme.disqus_user)
     script

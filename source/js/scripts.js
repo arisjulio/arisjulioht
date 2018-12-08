@@ -1,0 +1,2 @@
+document.querySelectorAll('#content article .article-content img').forEach(e => e.parentElement.classList.add('text-center'));
+document.querySelectorAll('#content article .page-content img').forEach(e => e.parentElement.classList.add('text-center'));

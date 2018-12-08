@@ -1,7 +1,11 @@
 header(id='blog-header')
     div(class='container')
         div(class='row')
-            div(class='col-md-12')
+            div(class='col-md-6')
                 h1(class='blog-title')= config.title 
-                span(class='separator')
                 h2(class='blog-subtitle')= config.subtitle
+            div(class='col-md-6')
+                nav(class="nav", id='main-menu')
+                    each item, i in theme.menu
+                        a(class='nav-link' + (is_current(item.url) ? ' active' : ''), href=url_for(item.url))
+                            != __(i)
